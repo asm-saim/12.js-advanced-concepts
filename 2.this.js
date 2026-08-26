@@ -23,3 +23,14 @@ const person2 = {
 };
 person1.greet();
 person2.greet();
+
+//this in an arrow function: Arrow functions do not have their own this.
+// The arrow function takes this from its surrounding scope.
+
+const games = {
+  name: "PS 5",
+  greet: () => {
+    console.log(this.name);
+  },
+};
+games.greet(); //will give undefined
