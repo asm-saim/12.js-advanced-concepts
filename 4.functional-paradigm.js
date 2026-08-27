@@ -23,11 +23,35 @@ console.log(sum());
 
 // First-class function = functions can be treated like values.
 
-function greet(fn) {
+function greeting(fn) {
   fn();
 }
 
 function sayHi() {
   console.log("Hi");
 }
-greet(sayHi);
+greeting(sayHi);
+
+//3. Higher-Order Function: A higher-order function (HOF) is a function that does at least one of these:
+// 1. Takes another function as an argument
+// 2. Returns another function
+
+//ex1:
+function execute(fn) {
+  fn();
+}
+function greet() {
+  console.log("Greetings!");
+}
+execute(greet);
+
+//ex2: Example 2: Returns a function
+
+function multiply(number) {
+  return function res(value) {
+    return value * number;
+  };
+}
+
+const output = multiply(5);
+console.log(output(5))
