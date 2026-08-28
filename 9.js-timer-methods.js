@@ -19,3 +19,10 @@ setInterval(() => {
   count++;
   console.log(`Value executed ${count} times.`);
 }, 1000);
+
+//How to set countdown timer form current time:
+setInterval(() => {
+  const date = new Date();
+  const time = date.toLocaleTimeString();
+  console.log(time);
+}, 1000);
