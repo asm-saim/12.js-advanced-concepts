@@ -1,5 +1,11 @@
-//Onek gula nested callback hile, tokhon callback hell create hoi.
+/*
+Onek gula nested callback hile, tokhon callback hell create hoi. tai Promise object lage.
 
+Promise: A Promise in JavaScript is an object that represents the future result of an asynchronous operation.
+
+The easiest way to understand it is:
+Promise = "I don't have the result yet, but I promise I'll give you the result later."
+*/
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("Promise 1 resolved");
@@ -48,3 +54,21 @@ parcelStat("Dell - Precision")
   .finally(() => {
     console.log("Parcel delivered successfully");
   });
+
+//promise.all
+// Promise.all([p1, p2])
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
+
+//promise.race
+// Promise.race([p1, p2])
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
