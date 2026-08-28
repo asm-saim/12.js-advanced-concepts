@@ -11,7 +11,7 @@ function callBackSum(something) {
 }
 sum(10, 10, callBackSum);
 
-//real life example:
+//real life example: Nested callback
 
 function getQuizMark(mark, cb) {
   setTimeout(() => {
@@ -45,3 +45,4 @@ getQuizMark(10, (quizMark) => {
     });
   });
 });
+
